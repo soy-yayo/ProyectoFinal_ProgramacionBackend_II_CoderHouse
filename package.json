@@ -1,0 +1,27 @@
+{
+  "name": "proyectofinal_programacionbackend_ii_coderhouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soy-yayo/ProyectoFinal_ProgramacionBackend_II_CoderHouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soy-yayo/ProyectoFinal_ProgramacionBackend_II_CoderHouse/issues"
+  },
+  "homepage": "https://github.com/soy-yayo/ProyectoFinal_ProgramacionBackend_II_CoderHouse#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.14.0",
+    "mongoose": "^8.11.0",
+    "nodemon": "^3.1.9"
+  }
+}
