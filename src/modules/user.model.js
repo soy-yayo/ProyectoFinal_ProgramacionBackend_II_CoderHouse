@@ -12,7 +12,6 @@ Encriptar la contraseña del usuario mediante el paquete bcrypt (Utilizar el mé
 */
 
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema({
   first_name: { type: String, required: true },
@@ -22,14 +21,6 @@ const userSchema = new mongoose.Schema({
   password:   { type: String, required: true },
   cart:       { type: mongoose.Schema.Types.ObjectId, ref: 'Carts' },
   role:       { type: String, default: 'user' }
-});
-
-// Middleware para encriptar la contraseña antes de guardar el usuario
-userSchema.pre('save', function(next) {
-  if (!this.isModified('password')) return next();
-  // Encripta la contraseña usando bcrypt.hashSync con 10 salt rounds
-  this.password = bcrypt.hashSync(this.password, 10);
-  next();
 });
 
 const User = mongoose.model('User', userSchema);
